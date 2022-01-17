@@ -1,6 +1,6 @@
 arr=[-5,4,6,-3,4,-1]
 
-max_sum=0
+max_sum=arr[0]
 cur_sum=0
 
 for i in arr:
