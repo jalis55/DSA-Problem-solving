@@ -31,6 +31,25 @@ class LinkedList():
             while second_last_node.next.next !=None:
                 second_last_node=second_last_node.next
             second_last_node.next=None
+    def insertTail(self,data):
+        if self.head is not None:
+            curr=self.head
+            while curr.next is not None:
+                curr=curr.next
+            newNode=Node(data)
+            curr.next=newNode
+        else:
+            newNode=Node(data)
+            self.head=newNode
+    def reverse(self):
+        prev=None
+        curr=self.head
+        while curr is not None:
+            next=curr.next
+            curr.next=prev
+            prev=curr
+            curr=next
+        self.head=prev
     def listprint(self):
         if self.head is None:
             print("Empty")
@@ -49,8 +68,13 @@ for i in data:
 
 # ll.insert(1)
 
-ll.lastNode()
+# ll.lastNode()
 ll.listprint()
-
-
+ll.reverse()
+print()
+ll.listprint()
+print()
+ll.insertTail(55)
+print()
+ll.listprint()
 
