@@ -1,3 +1,6 @@
+from itertools import count
+
+
 class Node():
     def __init__(self,data):
         self.data=data
@@ -50,6 +53,24 @@ class LinkedList():
             prev=curr
             curr=next
         self.head=prev
+    def reverseKgroup(self,head,k):
+        curr=head
+        next=None
+        prev=None
+        count=0
+
+        while curr is not None and count < k:
+            next=curr.next
+            curr.next=prev
+            prev=curr
+            curr=next
+            count +=1
+        if next is not None:
+            head.next=self.reverseKgroup(next,k)
+        return prev
+
+
+
     def listprint(self):
         if self.head is None:
             print("Empty")
@@ -78,3 +99,11 @@ ll.insertTail(55)
 print()
 ll.listprint()
 
+ll.insertTail(54)
+print()
+print()
+ll.listprint()
+ll.head=ll.reverseKgroup(ll.head,2)
+
+print()
+ll.listprint()
