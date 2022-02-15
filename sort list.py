@@ -6,5 +6,5 @@ while lst !=[]:
 
     sorted_lst.append(m)
     lst.remove(m)
-
+del lst
 print(sorted_lst)
