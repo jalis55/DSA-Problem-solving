@@ -6,5 +6,6 @@ for i,n in enumerate(nums):
     if diff in prevmap:
         print(prevmap[diff],i)
     prevmap[n]=i 
+    print(prevmap)
 
 
