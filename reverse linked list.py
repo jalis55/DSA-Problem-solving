@@ -30,6 +30,32 @@ class LinkedList:
 		new_node = Node(new_data)
 		new_node.next = self.head
 		self.head = new_node
+	def reorder(self):
+		print(self.head.data)
+		slow=self.head
+		fast=self.head.next
+		
+		while fast and fast.next:
+			slow=slow.next
+			fast=fast.next.next
+		print(slow.data,fast.data)
+
+		second=slow.next
+		prev=slow.next=None
+
+		while second:
+			tmp=second.next
+			prev=second
+			second=tmp
+
+			#merge
+			first,second=self.head,prev
+			while second:
+				tmp1,tmp2=first.next,second.next
+				first.next=second
+				second.next=tmp1
+				first,second=tmp1,tmp2
+
 
 	# Utility function to print the linked LinkedList
 	def printList(self):
@@ -41,14 +67,16 @@ class LinkedList:
 
 # Driver code
 llist = LinkedList()
-llist.push(20)
+llist.push(5)
 llist.push(4)
-llist.push(15)
-llist.push(85)
+llist.push(3)
+llist.push(2)
+llist.push(1)
 
 print ("Given Linked List")
 llist.printList()
 llist.reverse()
 print ("\nReversed Linked List")
 llist.printList()
+llist.reorder()
 
