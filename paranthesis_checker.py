@@ -1,23 +1,15 @@
-string='[]]'
+def isvalid(string):
+    stack=[]
+    closeToOpen={")":"(","}":"{","]":"["}
 
-open='({['
-close=')}]'
-pp=['()','{}','[]']
-stack=[]
-valid=True
-for p in string:
-    if p in open:
-        stack.append(p)
-    if p in close:
-        if len(stack) !=0:
-            if stack.pop()+p not in pp:
-                valid=False
-                break
+    for c in string:
+        if c in closeToOpen:
+            if stack and stack[-1]==closeToOpen[c]:
+                stack.pop()
+            else:
+                return False
         else:
-            valid=False
-            break
-
-if valid==False:
-    print("Invalid")
-else:
-    print("valid")
+            stack.append(c)
+    return True if not stack else False
+    
+print(isvalid('[()]'))
