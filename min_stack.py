@@ -1,42 +1,37 @@
-stack=[]
-minStack=[]
-min=None
+class MinStack:
 
-def push(val):
-	global min
-	if not min:
-		min=val
-		minStack.append(val)
-		stack.append(val)
-	else:
-		if min>=val:
-			min=val
-			minStack.append(min)
-		stack.append(val)
-def pop():
-	if stack[-1]==minStack[-1]:
-		stack.pop()
-		minStack.pop()
-	else:
-		stack.pop()
+    def __init__(self):
+        self.stack=[]
+        self.minStack=[]
+        
+
+    def push(self, val: int) -> None:
+        self.stack.append(val)
+        if not self.minStack:
+            self.minStack.append(val)
+        else:
+            if self.minStack[-1]>=val:
+                self.minStack.append(val)
+            
+
+    def pop(self) -> None:
+        if self.minStack[-1]==self.stack[-1]:
+            self.minStack.pop()
+        self.stack.pop()
+        
+
+    def top(self) -> int:
+        return self.stack[-1] if self.stack else None
+        
+
+    def getMin(self) -> int:
+        return self.minStack[-1] if self.minStack else None
+        
 
 
-def top():
-	return stack[-1] if stack else None
-
-print(top())
-
-push(2)
-push(1)
-push(-2)
-push(3)
-
-print(stack)
-print(minStack)
-
-pop()
-pop()
-print(stack)
-print(minStack)
-
-print(f"Min stack is:{minStack[-1]}")
+# Your MinStack object will be instantiated and called as such:
+# obj = MinStack()
+# obj.push(val)
+# obj.pop()
+# param_3 = obj.top()
+# param_4 = obj.getMin()
