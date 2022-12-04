@@ -1,18 +1,15 @@
 class Queue():
     def __init__(self) -> None:
         self.queue=list()
-    
     def is_empty(self):
         if len(self.queue)==0:
             print("Empty queue")
             return
-    
     def enqueue(self,data):
         self.queue.append(data)
-    
     def dequeue(self):
         self.queue.pop(0)
-    
+
     def front(self):
         self.is_empty()
         return self.queue[0]
