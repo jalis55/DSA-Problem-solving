@@ -11,16 +11,11 @@ while i<len(s):
     if s[i] not in tracker:
         tracker +=s[i]
         maxLength=max(maxLength,len(tracker))
-        print(tracker)
+        maxLength=maxLength if maxLength>len(tracker) else len(tracker)
         i +=1
 
     else:
-        if s[i]==s[i-1]:            
-            tracker=s[i]
-            i +=1
-            # break
-        else:
-            tracker =s[i-1]
+        tracker=tracker[1:]
     
     
 
