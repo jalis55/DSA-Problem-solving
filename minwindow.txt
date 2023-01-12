@@ -1,5 +1,5 @@
 def minWindow(self, s: str, t: str) -> str:
-        '''
+
         Keep t_counter of char counts in t
         
         We make a sliding window across s, tracking the char counts in s_counter
