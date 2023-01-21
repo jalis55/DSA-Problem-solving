@@ -1,0 +1,10 @@
+Unsoled
+Array and Hashing:
+*Longest Consecutive Sequence
+*Encode And Decode Strings   
+
+Two pointers:
+*3Sum
+
+Slidding window
+Minimum Window Substring
