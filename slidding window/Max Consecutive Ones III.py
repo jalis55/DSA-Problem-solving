@@ -14,3 +14,7 @@ for right in range(len(nums)):
     res=max(res,right-left+1)
 
 print(res)
+
+###
+# please visit https://leetcode.com/problems/max-consecutive-ones-iii/solutions/719833/python3-sliding-window-with-clear-example-explains-why-the-soln-works/
+###
