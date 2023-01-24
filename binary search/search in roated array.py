@@ -8,13 +8,13 @@ def search(nums,target,left,right):
         if nums[mid]==target:
             return mid
         elif nums[mid]>=nums[left]:
-            # if(target<=nums[mid] && target>=nums[left])
+            
             if nums[mid]>=target and nums[left]<=target:
                 return search(nums,target,left,mid-1)
             else:
                 return search(nums,target,mid+1,right)
         else:
-            # if(target>=nums[mid] && target<=nums[right])
+            
             if nums[mid]<=target and nums[right]>=target:
                 return search(nums,target,mid+1,right)
             else:
