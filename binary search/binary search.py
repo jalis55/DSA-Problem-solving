@@ -1,5 +1,14 @@
 def binary_search(nums,key,left,right):
-    pass
+    if left<=right:
+        mid=(left+right)//2
+        if nums[mid]==key:
+            return mid
+        else:
+            pass
+
+
+    else:
+        return -1
 
 
 
