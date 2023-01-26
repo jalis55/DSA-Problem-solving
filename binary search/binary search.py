@@ -3,9 +3,10 @@ def binary_search(nums,key,left,right):
         mid=(left+right)//2
         if nums[mid]==key:
             return mid
+        elif nums[mid]>key:
+            return binary_search(nums,key,left,mid-1)
         else:
-            pass
-
+            return binary_search(nums,key,mid+1,right)
 
     else:
         return -1
