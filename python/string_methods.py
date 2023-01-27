@@ -13,3 +13,22 @@ print(lower_text)
 #title case
 title_text=text.title()
 print(title_text)
+
+# capitalize case
+text_capitalize=text.capitalize()
+print(text_capitalize)
+
+# padding 
+
+print(text_capitalize.center(40))
+
+#count a specific character
+print(text.count('m'))
+
+# endswith
+
+#startswith
+
+# expand text
+print(text.expandtabs(2))
+
