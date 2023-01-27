@@ -30,5 +30,9 @@ print(text.count('m'))
 #startswith
 
 # expand text
-print(text.expandtabs(2))
+print(text.expandtabs(4))
+
+# specifice word location
+
+print(text.find('not'))
 
