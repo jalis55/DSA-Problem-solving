@@ -36,6 +36,7 @@ class Solution(object):
                 for i in range(0, mid):
                     if nums[i] > 0:
                         maxi += 1
+                print(maxi)
                 return maxi + len(nums[mid:])
 
 
