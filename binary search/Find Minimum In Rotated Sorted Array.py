@@ -16,7 +16,7 @@ def findMin(nums,l,r):
         elif nums[mid]<nums[r]:
             r=mid
         else:
-            nums[r]
+           return nums[r]
     return nums[l]
         
 
