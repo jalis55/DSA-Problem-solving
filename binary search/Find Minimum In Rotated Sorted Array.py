@@ -7,7 +7,8 @@ nums=[3, 1, 2]
 # left=0
 # right=len(nums)-1
 
-def findMin(nums,l,r):
+def findMin(nums):
+    l,r=0,len(nums)-1
     mid=(l+r)//2
     
     while l<r:
@@ -21,4 +22,4 @@ def findMin(nums,l,r):
         
 
 
-print(findMin(nums,0,len(nums)-1))
+print(findMin(nums))
