@@ -43,4 +43,5 @@ class Solution(object):
 s = Solution()
 
 nums = [-2, -1, -1, 1, 2, 3]
+
 print(s.maximumCount(nums))
