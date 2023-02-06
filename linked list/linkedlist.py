@@ -16,6 +16,16 @@ class LinkedList:
             newNode=Node(data)
             newNode.next=self.head
             self.head=newNode
+    def inserTail(self,data):
+        if self.head==None:
+            self.insert(data)
+        else:
+            newNode=Node(data)
+            temp=self.head
+            while temp.next:
+                temp=temp.next
+            temp.next=newNode
+
     def lastItem(self):
         temp=self.head
         while temp.next:
@@ -39,4 +49,6 @@ for i in random.sample(lst,5):
 print(ll.printList())
 
 print(ll.lastItem())
+ll.inserTail(66)
+print(ll.printList())
 
