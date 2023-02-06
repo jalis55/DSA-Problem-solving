@@ -17,3 +17,10 @@ random_list=[]
 for _ in range(10):
     random_list.append(random.randint(1,999))
 print(random_list)
+
+# sample
+
+print(random.sample(random_list,4))
+
+# uniform
+print(random.uniform(1, 5))
