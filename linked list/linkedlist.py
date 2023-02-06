@@ -10,7 +10,10 @@ class LinkedList:
     
     def insert(self,data):
         if self.head ==None:
+            self.head=Node(data)
+        else:
             newNode=Node(data)
+            newNode.next=self.head
             self.head=newNode
         
     def printList(self):
@@ -18,6 +21,7 @@ class LinkedList:
 
 ll=LinkedList()
 ll.insert(5)
+ll.insert(2)
 print(ll.printList())
 
 
