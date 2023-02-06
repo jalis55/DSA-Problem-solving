@@ -1,3 +1,4 @@
+import random
 class Node:
     def __init__(self,data) -> None:
         self.data=data
@@ -21,22 +22,10 @@ class LinkedList:
         while temp is not None:
             print(temp.data,end="->")
             temp=temp.next
-
-
+random.seed(2)
+lst=[random.randint(1,20) for i in range(20)]
 ll=LinkedList()
-ll.insert(5)
-ll.insert(2)
+for i in random.sample(lst,5):
+    ll.insert(i)
 print(ll.printList())
 
-
-
-
-
-
-
-
-
-
-
-
-data=[1,2,3]
