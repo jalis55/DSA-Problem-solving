@@ -17,7 +17,11 @@ class LinkedList:
             self.head=newNode
         
     def printList(self):
-        print(self.head.data)
+        temp=self.head
+        while temp is not None:
+            print(temp.data,end="->")
+            temp=temp.next
+
 
 ll=LinkedList()
 ll.insert(5)
