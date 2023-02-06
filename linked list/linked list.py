@@ -1,6 +1,3 @@
-from itertools import count
-
-
 class Node():
     def __init__(self,data):
         self.data=data
@@ -90,20 +87,4 @@ for i in data:
 # ll.insert(1)
 
 # ll.lastNode()
-ll.listprint()
-ll.reverse()
-print()
-ll.listprint()
-print()
-ll.insertTail(55)
-print()
-ll.listprint()
-
-ll.insertTail(54)
-print()
-print()
-ll.listprint()
-ll.head=ll.reverseKgroup(ll.head,2)
-
-print()
 ll.listprint()
