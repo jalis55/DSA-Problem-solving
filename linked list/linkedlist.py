@@ -16,16 +16,27 @@ class LinkedList:
             newNode=Node(data)
             newNode.next=self.head
             self.head=newNode
-        
-    def printList(self):
+    def lastItem(self):
         temp=self.head
-        while temp is not None:
-            print(temp.data,end="->")
+        while temp.next:
             temp=temp.next
+        return temp.data
+    def printList(self):
+        if self.head is None:
+            print("Empty")
+        temp = self.head
+        while temp is not None:
+            print (temp.data,end="->")
+            temp = temp.next
+
 random.seed(2)
 lst=[random.randint(1,20) for i in range(20)]
 ll=LinkedList()
 for i in random.sample(lst,5):
     ll.insert(i)
+
+
 print(ll.printList())
+
+print(ll.lastItem())
 
