@@ -1,9 +1,9 @@
-nums = [3,2,1]
+# nums = [3,2,1]
+nums=[5,2,2]
+print(nums[-3])
 
-prev=-1111
-count=0
-for i in nums:
-    if i in prev:
-        nums.remove(i)
-
-print(nums[len(nums)-1])
+nums = sorted(list(set(nums)))
+if len(nums) > 2:
+    print( nums[-3])
+else:
+    print(nums[-1]) 
