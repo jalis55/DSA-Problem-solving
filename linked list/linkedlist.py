@@ -25,12 +25,27 @@ class LinkedList:
             while temp.next:
                 temp=temp.next
             temp.next=newNode
-    def removeTail(self):
-        pass
 
-    def removeItem(self):
-        pass
-    
+
+    def removeItem(self,data):
+        if self.head == None:
+            return "Empty"
+        if self.head.data==data:
+            self.head=self.head.next
+            return 
+        temp=self.head
+        curr=temp
+        while temp:
+            if temp.data==data:
+                curr.next=temp.next
+                return "Item removed"
+            else:
+                curr=temp
+                temp=temp.next
+        else:
+            return "Data not found"
+        
+
 
     def lastItem(self):
         temp=self.head
@@ -57,4 +72,9 @@ print(ll.printList())
 print(ll.lastItem())
 ll.inserTail(66)
 print(ll.printList())
+ll.removeItem(13)
+print(ll.printList())
+print(ll.removeItem(7))
+print(ll.printList())
+
 
