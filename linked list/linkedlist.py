@@ -25,6 +25,12 @@ class LinkedList:
             while temp.next:
                 temp=temp.next
             temp.next=newNode
+    def removeTail(self):
+        pass
+
+    def removeItem(self):
+        pass
+    
 
     def lastItem(self):
         temp=self.head
