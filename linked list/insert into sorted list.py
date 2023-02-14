@@ -17,6 +17,7 @@ class LinkedList:
         else:
 
             temp = self.head
+            prev = None
             while temp:
                 if temp.data > data:
 
