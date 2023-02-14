@@ -15,9 +15,20 @@ class LinkedList:
         if self.head == None:
             self.head = Node(data)
         else:
-            newNode = Node(data)
-            newNode.next = self.head
-            self.head = newNode
+
+            temp = self.head
+            while temp:
+                if temp.data > data:
+
+                    newNode = Node(data)
+                    self.head = newNode
+                    newNode.next = temp
+                    temp = temp.next
+                else:
+
+                    # newNode = Node(data)
+                    # newNode.next = self.head
+                    # self.head = newNode
 
     def printList(self):
         if self.head is None:
@@ -28,11 +39,8 @@ class LinkedList:
             temp = temp.next
 
 
-random.seed(5)
-lst = [random.randint(1, 20) for i in range(3)]
-print(lst)
 ll = LinkedList()
-for i in random.sample(lst, 3):
-    ll.insert(i)
+ll.insert(3)
+ll.insert(1)
 
 print(ll.printList())
