@@ -12,7 +12,6 @@ class LinkedList:
         self.head = None
 
     def insert(self, data):
-        print("ok")
         if self.head == None:
             self.head = Node(data)
         else:
@@ -21,19 +20,16 @@ class LinkedList:
             prev = None
             newNode = Node(data)
             while temp:
-                prev=temp
+                prev = temp
                 if temp.data > newNode.data:
-                    temp=newNode
-                    temp.next=prev
-                    return
+
+                    temp = newNode
+                    temp.next = prev
 
                 else:
 
-                    # newNode = Node(data)
-                    # newNode.next = self.head
-                    # self.head = newNode
                     pass
-                temp=temp.next
+                temp = temp.next
 
     def printList(self):
         if self.head is None:
