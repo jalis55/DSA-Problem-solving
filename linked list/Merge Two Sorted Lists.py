@@ -2,9 +2,9 @@
 # Output: [1,1,2,3,4,4]
 
 class Node:
-    def __init__(self,data) -> None:
+    def __init__(self,data=0,next=None) -> None:
         self.data=data
-        self.next=None
+        self.next=next
 
 
 class LinkedList:
@@ -29,7 +29,21 @@ class LinkedList:
 
 
 def margeList(l1,l2):
-    pass
+    marged_list=Node()
+    head=marged_list
+    while l1 and l2:
+        if l1.data <l2.data:
+            head.next=l1
+            l1=l1.next
+        else:
+            head.next=l2
+            l2=l2.next
+        head=head.next
+    if l1:
+        head.next=l1
+    else:
+        head.next=l2
+    return marged_list
 
 
 l1=LinkedList()
@@ -44,4 +58,10 @@ l2.insert(5)
 l2.insert(4)
 l2.insert(1)
 print(l2.printList())
+
+marged=margeList(l1.head,l2.head)
+
+while marged:
+    print(marged.data,end="-->")
+    marged=marged.next
 
