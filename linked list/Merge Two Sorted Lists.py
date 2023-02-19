@@ -43,7 +43,7 @@ def margeList(l1,l2):
         head.next=l1
     else:
         head.next=l2
-    return marged_list
+    return marged_list.next
 
 
 l1=LinkedList()
