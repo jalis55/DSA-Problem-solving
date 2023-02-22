@@ -1,0 +1,28 @@
+CREATE TABLE STUDENTS (
+  Id INTEGER NOT NULL,
+  name varchar(199) NOT NULL,
+  subject varchar(199) NOT NULL,
+  score INTEGER NOT NULL
+);
+
+
+INSERT INTO STUDENTS VALUES (0001, 'Clark', 'eng',100);
+INSERT INTO STUDENTS VALUES (0002, 'Dave', 'eng',99);
+INSERT INTO STUDENTS VALUES (0003, 'Ava', 'eng',98);
+INSERT INTO STUDENTS VALUES (0004, 'Adams', 'eng',97);
+INSERT INTO STUDENTS VALUES (0005, 'James', 'eng',96);
+INSERT INTO STUDENTS VALUES (0006, 'Clark', 'bn',100);
+INSERT INTO STUDENTS VALUES (0007, 'Dave', 'bn',99);
+INSERT INTO STUDENTS VALUES (0008, 'Ava', 'bn',98);
+INSERT INTO STUDENTS VALUES (0009, 'Adams', 'bn',97);
+INSERT INTO STUDENTS VALUES (0010, 'James', 'bn',96);
+INSERT INTO STUDENTS VALUES (0011, 'Clark', 'mat',100);
+INSERT INTO STUDENTS VALUES (0012, 'Dave', 'mat',99);
+INSERT INTO STUDENTS VALUES (0013, 'Ava', 'mat',98);
+INSERT INTO STUDENTS VALUES (0014, 'Adams', 'mat',97);
+INSERT INTO STUDENTS VALUES (0015, 'James', 'mat',96);
+
+select * from (select *,
+ROW_NUMBER() over(partition by subject order by score desc) rn
+from STUDENTS) std
+where rn<4
