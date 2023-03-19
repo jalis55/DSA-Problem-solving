@@ -2,3 +2,5 @@ delete code
 //https://www.geeksforgeeks.org/how-to-create-to-do-list-using-jquery/
 delete code
 //https://www.geeksforgeeks.org/how-to-create-to-do-list-using-jquery/
+search
+//https://www.w3schools.com/jquery/jquery_filters.asp

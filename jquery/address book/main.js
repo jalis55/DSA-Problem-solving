@@ -2,6 +2,13 @@ $(document).ready(function () {
     function resetForm() {
         $("form")[0].reset();
     }
+    $("#searchValue").on("keyup", function () {
+        console.log("invoked")
+        var value = $(this).val().toLowerCase();
+        $("#addressData tr th").show().filter(function () {
+            return $(this).text().toLowerCase().trim().indexOf(value) == -1;
+        }).hide();
+    });
     $("#form").on("submit", function (e) {
         e.preventDefault();
         let name = $("#name").val();
@@ -28,5 +35,7 @@ $(document).ready(function () {
         console.log($(this).parent().html())
         $(this).parent("tr").remove();
     });
+    //search
+
 
 });
