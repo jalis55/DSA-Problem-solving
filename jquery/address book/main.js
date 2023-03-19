@@ -1,7 +1,4 @@
 $(document).ready(function () {
-    function resetForm() {
-        $("form")[0].reset();
-    }
 
     $("#form").on("submit", function (e) {
         e.preventDefault();
