@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: bisque;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+    flex-wrap: wrap;
+}
+
+.addressBookForm {
+
+
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+input {
+
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+
+
+}
+
+.empty {
+    width: 40%;
+}
+
+.message {
+    color: red;
+    display: none;
+    margin-bottom: 20px;
+}
+.title{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+.submit-btn {
+    padding: 10px;
+    border: none;
+    background-color: aquamarine;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#addressDetails{
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+
+}
+
+/*Table elements*/
+/* https://www.freecodecamp.org/news/html-tables-table-tutorial-with-css-example-code/ */
+table {
+    text-align: left;
+    position: relative;
+    margin-top: 20px;
+
+  }/* Spacing */
+  td, th {
+    border: 1px solid #999;
+    padding: 20px;
+  }
+  th {
+    background: rgb(86, 221, 97);
+    color: white;
+    border-radius: 0;
+    top: 0;
+    padding: 10px;
+  }
+
+  
+ 
+  tbody > tr:hover {
+    background-color: #60bde9;
+  }
+
+  /* delete btn */
+  #delete{
+    margin-top: 20px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: red;
+    color:white;
+    border:none;
+    cursor: pointer;
+  }

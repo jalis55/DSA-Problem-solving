@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address book</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div>
+            <p class="title">Address Book Form</p>
+            <form action="" id="form" class="addressBookForm">
+
+                <input type="text" id="name" placeholder="Enter Name"><br>
+                <p class="message">Name can not be empty</p>
+                <input type="text" id="surname" placeholder="Enter Surname"><br>
+                <p class="message">Surname can not be empty</p>
+                <input type="text" id="phone" placeholder="Enter Phone"><br>
+                <p class="message">Phone can not be empty</p>
+                <input type="text" id="address" placeholder="Enter Address"><br>
+                <p class="message">Address can not be empty</p>
+                <button class="submit-btn" type="submit">Add to address book</button>
+            </form>
+        </div>
+
+        <div class="addressBook">
+            <p class="title">Address Book</p>
+            <input type="text" id="searchValue" placeholder="Search">
+            <table id="addressDetails">
+
+                <thead>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                </thead>
+
+
+                <tbody id="addressBookData">
+
+                </tbody>
+
+
+
+            </table>
+        </div>
+
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
