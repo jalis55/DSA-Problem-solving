@@ -36,3 +36,5 @@ print(text.expandtabs(4))
 
 print(text.find('not'))
 
+print("test".expandtabs(6))
+
