@@ -8,5 +8,6 @@ for _ in range(5):
     rand.shuffle(b)
     rand.shuffle(g)
 
+# generating pairs
 pair=[rand.choice(b),rand.choice(g)]
 print(f"The pair is:{pair}")
