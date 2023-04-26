@@ -1,1 +1,2 @@
-n=19
+
+print("working on happy number")
