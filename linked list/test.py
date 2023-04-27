@@ -41,31 +41,34 @@ class LinkedList():
         else:
             newNode=Node(data)
             self.head=newNode
-    def reverse(self):
-        prev=None
-        curr=self.head
-        while curr is not None:
-            next=curr.next
-            curr.next=prev
-            prev=curr
-            curr=next
-        self.head=prev
-    def reverseKgroup(self,head,k):
-        curr=head
-        next=None
-        prev=None
+
+
+
+
+    def removeNth(self):
+        if self.head is None:
+            return False
         count=0
-
-        while curr is not None and count < k:
-            next=curr.next
-            curr.next=prev
-            prev=curr
-            curr=next
+        temp=self.head
+        while temp:
             count +=1
-        if next is not None:
-            head.next=self.reverseKgroup(next,k)
-        return prev
-
+            temp=temp.next
+        
+        flag=count-2
+        temp2=self.head
+        while temp2:
+            if flag==count:
+                temp2=temp2.next.next
+                print(temp2.data)
+                break
+            else:
+                count -=1
+                temp2=temp2.next
+        while temp2:
+            print(temp2.data)
+            temp2=temp2.next
+        self.head=temp2
+        
 
 
     def listprint(self):
@@ -80,11 +83,12 @@ class LinkedList():
 
 ll=LinkedList()
 
-data=[1,2,3]
+data=[1,2,3,4,5]
 for i in data:
     ll.insert(i)
 
 # ll.insert(1)
 
 # ll.lastNode()
-ll.listprint()
+# ll.listprint()
+ll.removeNth()
