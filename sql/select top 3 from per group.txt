@@ -26,3 +26,5 @@ select * from (select *,
 ROW_NUMBER() over(partition by subject order by score desc) rn
 from STUDENTS) std
 where rn<4
+
+--dense_rank

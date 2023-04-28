@@ -49,25 +49,27 @@ class LinkedList():
         if self.head is None:
             return False
         count=0
+
         temp=self.head
         while temp:
             count +=1
             temp=temp.next
-        
-        flag=count-2
-        temp2=self.head
+        dummy=Node(0)
+        dummy.next=self.head
+
+        flag=(count-1)-3
+        temp2=dummy
         while temp2:
             if flag==count:
-                temp2=temp2.next.next
-                print(temp2.data)
+                temp2.next=temp2.next.next
+                print('----',temp2.data)
                 break
             else:
                 count -=1
                 temp2=temp2.next
-        while temp2:
-            print(temp2.data)
-            temp2=temp2.next
-        self.head=temp2
+
+
+        self.head=dummy.next
         
 
 
@@ -90,5 +92,6 @@ for i in data:
 # ll.insert(1)
 
 # ll.lastNode()
-# ll.listprint()
+ll.listprint()
 ll.removeNth()
+ll.listprint()
