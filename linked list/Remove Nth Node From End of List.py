@@ -48,4 +48,4 @@ for i in random.sample(lst,5):
 
 print(ll.printList())
 print(ll.reverseList())
-print(ll.printList())
+# print(ll.printList())
