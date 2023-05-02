@@ -75,6 +75,6 @@ print(ll.printList())
 ll.removeItem(13)
 print(ll.printList())
 print(ll.removeItem(7))
-print(ll.printList())
+# print(ll.printList())
 
 
