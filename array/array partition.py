@@ -10,3 +10,4 @@ for i in nums:
         if i==j:
             continue
         print(i,j)
+print(i,j)
