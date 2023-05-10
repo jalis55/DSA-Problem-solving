@@ -45,12 +45,28 @@ def PostOrder(root):
         PostOrder(root.right)
         print(root.data)
 
+def max_in_bst(root):
+    if root is None:
+        return (-12121212)
+    left_max=max_in_bst(root.left)
+    right_max=max_in_bst(root.right)
+    return max(root.data,left_max,right_max)
+
+def min_in_bst(root):
+    if root is None:
+        return (434343)
+    left_min=min_in_bst(root.left)
+    right_min=min_in_bst(root.right)
+    return min(root.data,left_min,right_min)
+
+
 
 # Use the insert method to add nodes
 root = Node(12)
 root.insert(6)
 root.insert(14)
 root.insert(3)
+root.insert(72)
 root.PrintTree()
 print("--------Inorder----------")
 Inorder(root)
@@ -58,3 +74,5 @@ print("--------PreOrder----------")
 PreOrder(root)
 print("--------PostOrder----------")
 PostOrder(root)
+print(f'Max element is:{max_in_bst(root)}')
+print(f'Max element is:{min_in_bst(root)}')
