@@ -44,6 +44,8 @@ def PostOrder(root):
         PostOrder(root.left)
         PostOrder(root.right)
         print(root.data)
+def right_view_bst(root):
+    pass
 
 
 # Use the insert method to add nodes
