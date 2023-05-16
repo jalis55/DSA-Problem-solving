@@ -54,7 +54,4 @@ root.insert(3)
 root.PrintTree()
 print("--------Inorder----------")
 Inorder(root)
-print("--------PreOrder----------")
-PreOrder(root)
-print("--------PostOrder----------")
-PostOrder(root)
+
