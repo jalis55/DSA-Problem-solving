@@ -33,17 +33,7 @@ def Inorder(root):
             Inorder(root.left)
             print(root.data)
             Inorder(root.right)
-def PreOrder(root):
-    if root:
-        print(root.data)
-        PreOrder(root.left)
-        PreOrder(root.right)
 
-def PostOrder(root):
-    if root:
-        PostOrder(root.left)
-        PostOrder(root.right)
-        print(root.data)
 
 
 # Use the insert method to add nodes
