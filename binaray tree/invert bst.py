@@ -54,4 +54,4 @@ Inorder(root)
 print("-----------after invert------------")
 invert_bst(root)
 
-Inorder
+Inorder(root)
