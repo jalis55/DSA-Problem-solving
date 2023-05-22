@@ -51,7 +51,5 @@ for i in inputs[1:]:
 print("--------Inorder----------")
 Inorder(root)
 
-print("-----------after invert------------")
-invert_bst(root)
 
-Inorder(root)
+
