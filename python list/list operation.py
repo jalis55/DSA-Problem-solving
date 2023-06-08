@@ -21,3 +21,16 @@ print(lst4)
 print(lst[::-1])
 # print last to n 
 print(lst[:4:-1])
+
+# list append
+lst_new=[i for i in range(10) if i%2==0 and i!=0]
+
+lst_new.append(10)
+lst_new.pop(0)
+lst_new.pop()
+
+
+
+
+
+print(lst_new)
