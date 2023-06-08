@@ -29,8 +29,14 @@ lst_new.append(10)
 lst_new.pop(0)
 lst_new.pop()
 
+# list to dictionary
+names=['habib','kamal','osman','nazir']
+ages=[22,32,25,30,27]
+
+mydict=dict()
+
+for name,age in zip(names,ages):
+    mydict[name]=age
 
 
-
-
-print(lst_new)
+print(mydict)
