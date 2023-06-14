@@ -1,5 +1,6 @@
 
 # double the number
+
 lst=list(range(1,20,2))
 
 new_lst=[]
@@ -13,6 +14,8 @@ for l in lst:
 print(new_lst)
 
 
+
+
 # using map
 result=list(map(make_double,lst))
 print(result)
@@ -20,5 +23,4 @@ print(result)
 # using lambda
 
 result2=list(map(lambda x:x+x,lst))
-
 print(result2)
