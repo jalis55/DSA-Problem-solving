@@ -11,3 +11,7 @@ result=list(filter(even_numbers,lst))
 
 print(result)
 
+# using lambda
+result2=list(filter(lambda x:x%2==0,lst))
+print(result2)
+
