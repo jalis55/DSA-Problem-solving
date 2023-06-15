@@ -39,4 +39,3 @@ for name,age in zip(names,ages):
     mydict[name]=age
 
 
-print(mydict)
