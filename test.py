@@ -14,8 +14,8 @@ c=0
 #     if ch>max:
 #         max=ch
 
-# print(max)
-# value=input()
+print(max)
+value=input()
 
 for i in range(20):
     if 1< i <10:
