@@ -16,35 +16,35 @@ class LinkedList:
             newNode.next=self.head
             self.head=newNode
 
-    def printLinkedList(self):
-        nodes=self.head
+def printLinkedList(head):
+    nodes=head
 
-        while nodes is not None:
-            print(nodes.data,end="--->")
-            nodes=nodes.next 
+    while nodes is not None:
+        print(nodes.data,end="--->")
+        nodes=nodes.next 
 
-    def removeFromMiddle(self):
-        total_element=0
-        currNode=self.head
-        
-        while currNode is not None:
-            total_element +=1
-            currNode=currNode.next
-        
-        middle_element=total_element//2
-        
-        count=0
-        node=self.head
+def removeDuplicate(head):
+    dummy=head
+    prev=dummy.data
 
-        while node is not None:
-            if count==middle_element:
-                node=node.next
-            print(node.data,end="-->")
-            count +=1
-            node =node.next
+    curr=dummy.next
 
+    if not curr:
+        return dummy
+    while curr:
+        print(curr.data)
+        if curr.data==prev:
+            
+            curr=curr.next
+        else:
+            dummy.next=curr
+            print(dummy.next.data)
+            prev=curr.data
+            curr=curr.next
+    dummy.next=None
+    return head
 
-
+    
 
 
 l1=LinkedList()
@@ -52,6 +52,10 @@ l1=LinkedList()
 # l1.insertNode(4)
 l1.insertNode(3)
 l1.insertNode(2)
-# l1.insertNode(1)
+l1.insertNode(1)
+l1.insertNode(1)
 # l1.printLinkedList()
-l1.removeFromMiddle()
+
+d=removeDuplicate(l1.head)
+
+printLinkedList(d)
